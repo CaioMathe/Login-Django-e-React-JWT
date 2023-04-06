@@ -2,8 +2,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
-from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework import status, generics
+from .serializers import SignUpSerializer
 
 
 class HomeView(APIView):
@@ -11,9 +11,23 @@ class HomeView(APIView):
      def get(self, request):
           content = {'message': 'Welcome to the JWT Authentication page using React Js and Django!'}
           return Response(content)
+     
+class SingUp(APIView):
+     serializer_class = SignUpSerializer
+
+     def post(self,request):
+          data =  request.data
+          serializer = self.serializer_class(data=data)
+
+          if serializer.is_valid():
+               serializer.save()
+               return Response(serializer.data, status=status.HTTP_201_CREATED)
+          
+          return  Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 class LogoutView(APIView):
-     permission_classes = (IsAuthenticated,)
+     permission_classes = [IsAuthenticated]
      def post(self, request):
           
           try:

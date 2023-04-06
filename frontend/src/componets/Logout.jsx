@@ -5,7 +5,8 @@ export const Logout = () => {
        (async () => {
          try {
             await axios.post('http://localhost:8000/logout/',{
-                 refresh_token:localStorage.getItem('refresh_token')
+                 refresh_token:localStorage.getItem('refresh_token'),
+                 token_b:'5',
                  } ,{headers: {'Content-Type': 'application/json',
                                 'Authorization': `Bearer ${localStorage.getItem('access_token')}`
 
