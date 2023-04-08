@@ -1,6 +1,6 @@
 <h1 align="center">Login Django e React JWT</h1>
 
-O projeto consiste no desenvolvimento de Api's com django rest para fins de Autenticação, Cadastro e Verificação dos Tokens.
+O projeto consiste no desenvolvimento de Api's com django rest para fins de Autenticação, Cadastro e Verificação dos Tokens. Na aplicação existe um sistema de interceptadores, para a verificação e refresh do token caso o mesmo se expire.
 
 Back-end: Django, Django Rest framework. </br>
 Front-end: React, Axios, Bootstrap, React-Toast. </br>
