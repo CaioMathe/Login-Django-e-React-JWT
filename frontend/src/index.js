@@ -6,7 +6,8 @@ import './interceptors/axios';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+//  ------------- Quando for fazer build trocar para: React.StrictMode -----------
+  <>
     <App />
-  </React.StrictMode>
+  </>
 );
