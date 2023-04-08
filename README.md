@@ -32,9 +32,9 @@ Para executar o Frontend da aplicação:
 ------------------------------------------------------------------------------------------------------------------------
 Todas as api's listadas abaixo:
 
-home/
-logout/
-create/
-token/
-token/refresh/
+home/ </br>
+logout/  </br>
+create/  </br>
+token/  </br>
+token/refresh/  </br>
 
