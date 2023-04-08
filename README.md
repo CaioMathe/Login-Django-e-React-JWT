@@ -2,8 +2,8 @@
 
 O projeto consiste no desenvolvimento de Api's com django rest para fins de Autenticação, Cadastro e Verificação dos Tokens.
 
-Back-end: Django, Django Rest framework.
-Front-end: React, Axios, Bootstrap, React-Toast.
+Back-end: Django, Django Rest framework. </br>
+Front-end: React, Axios, Bootstrap, React-Toast. </br>
 Banco de dados: Sqlite3
 ------------------------------------------------------------------------------------------------------------------------
 
